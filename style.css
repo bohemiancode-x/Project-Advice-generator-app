@@ -1,0 +1,123 @@
+:root {
+    /* Primary colors */
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+
+    /* Neutral colors */
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    min-width: 400px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: var(--Dark-Blue);
+    color: white;
+}
+
+.card {
+    padding: 30px;
+    height: 35vh;
+    width: 30%;
+    min-width: 500px;
+    background-color: var(--Dark-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 30px; */
+    border-radius: 15px;
+}
+
+.card .advice h4 {
+    text-align: center;
+    color: var(--Neon-Green);
+    letter-spacing: 5px;
+    margin-top: -10px;
+}
+
+.card p {
+    font-size: 28px;
+    padding: 50px;
+    text-align: center;
+    width: 500px;
+    color: var(--Light-Cyan);
+}
+
+.mobile-divider {
+    display: none;
+}
+
+.desktop-divider {
+    margin-bottom: 50px;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: var(--Neon-Green);
+    position: relative;
+    top: -30px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    box-shadow: 0px 0px 40px 2px var(--Neon-Green);
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px){
+    .card-container {
+        width: 100%;
+    }
+
+    .card {
+        min-width: 320px;
+    }
+
+    .card .advice h4 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .mobile-divider {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    .desktop-divider {
+        display: none;
+    }
+
+    .card p {
+        width: 350px;
+    }
+
+    button {
+        height: 70px;
+        width: 70px;
+    }
+
+
+
+
+}
